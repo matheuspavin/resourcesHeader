@@ -1,0 +1,6 @@
+{
+  "restartable": "r",
+  "watch": ["src"],
+  "ext": "ts js json",
+  "exec": "npm run compile"
+}
