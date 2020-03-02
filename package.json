@@ -2,21 +2,45 @@
   "name": "resources-crawler",
   "version": "1.0.0",
   "description": "",
-  "main": "Crawler.app.js",
+  "main": "build/start.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "node node_modules/.bin/ts-node -r tsconfig-paths/register src/Crawler.app.ts",
-    "watch": "node node_modules/.bin/nodemon"
+    "build": "npm run build-ts",
+    "serve": "node dist/server.js",
+    "watch-node": "nodemon dist/server.js",
+    "build-ts": "tsc",
+    "watch-ts": "tsc -w"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/node": "^13.7.0",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "connect-mongo": "^3.0.0",
+    "errorhandler": "^1.5.1",
+    "express": "^4.17.1",
+    "express-validator": "^6.2.0",
+    "mongoose": "^5.7.1",
     "nodemon": "^2.0.2",
     "request": "^2.88.0",
     "ts-node": "^8.6.2",
     "tsc": "^1.20150623.0",
-    "tsconfig-paths": "^3.9.0",
     "typescript": "^3.7.5"
+  },
+  "devDependencies": {
+    "@types/async": "^3.0.2",
+    "@types/body-parser": "^1.17.1",
+    "@types/chai": "^4.2.3",
+    "@types/compression": "^1.0.1",
+    "@types/express": "^4.17.1",
+    "@types/mongoose": "^5.5.18",
+    "@types/node": "^12.7.8",
+    "@types/supertest": "^2.0.8",
+    "@types/errorhandler": "^0.0.32",
+    "@types/request": "^2.48.3",
+    "chai": "^4.2.0",
+    "nodemon": "^1.19.2",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.3"
   }
 }

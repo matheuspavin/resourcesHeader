@@ -1,15 +1,18 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "declaration": true,
-    "removeComments": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "target": "es2015",
+    "esModuleInterop": true,
     "sourceMap": true,
+    "target": "es2017",
     "outDir": "./dist",
-    "baseUrl": "./",
-    "allowJs": true
+    "baseUrl": "./src",
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node"
   },
-  "exclude": ["node_modules"]
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
